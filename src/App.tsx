@@ -1,9 +1,20 @@
-import React from 'react'
+import Nav from './components/Nav';
+import Header from './components/Header';
+import Partners from './components/Partners';
+import Support from './components/Support';
+import FAQs from './components/FAQs';
+import Footer from './components/Footer';
 
 function App() {
-    
   return (
-    <div>App</div>
+    <>
+      <Nav />
+      <Header />
+      <Partners />
+      <Support />
+      <FAQs />
+      <Footer />
+    </>
   )
 }
 

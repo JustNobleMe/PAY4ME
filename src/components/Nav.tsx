@@ -9,7 +9,7 @@ export default function Nav() {
       </div>
       <ul className='flex items-center gap-12 bg-black text-white p-2 pr-8 rounded-2xl text-md'>
         <li><a href='#' className='bg-white text-black px-2 py-1 rounded-lg'>Home</a></li>
-        <li><a href='#' className=''>About</a></li>
+        <li><a href='#' className='focus:bg-white focus:text-black'>About</a></li>
         <li><a href='#'>Blog</a></li>
         <li><a href='#'>Support</a></li>
         <li><a href='#'>FAQs</a></li>

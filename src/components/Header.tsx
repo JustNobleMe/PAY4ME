@@ -11,7 +11,10 @@ import {
 export default function Header() {
   return (
     <header className='h-full flex gap-4 px-12 mt-15'>
-      <div className='flex-1 bg-radial from-[#74bf24] from-10% via-green-100 via-30% to-white to-80% relative rounded-lg'>
+      <div className='relative flex-1'>
+        <div className='animate-pulse h-full w-full bg-radial from-[#74bf24] from-10% via-green-100 via-30% to-white to-80% rounded-lg'>
+        
+        </div>
         <img src={Phone} alt="Phone" className='absolute -top-25 left-0 h-full w-full ' />
       </div>
       <div className='flex-1 flex flex-col gap-2'>

@@ -13,10 +13,12 @@ function App() {
 
   useEffect(() => {
     const handleLoad = () => {
+      setTimeout(() => {
       // Delay rendering until next paint cycle
       requestAnimationFrame(() => {
         setIsLoaded(true);
       });
+      }, 300)
     };
 
     if (document.readyState === 'complete') {

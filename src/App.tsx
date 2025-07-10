@@ -18,7 +18,7 @@ function App() {
       requestAnimationFrame(() => {
         setIsLoaded(true);
       });
-      }, 300)
+      }, 400)
     };
 
     if (document.readyState === 'complete') {

@@ -9,45 +9,46 @@ import Mobile from './components/mobile';
 import Loader from './components/Loader';
 
 function App() {
-   const [isLoaded, setIsLoaded] = useState(false);
+  const [isLoaded, setIsLoaded] = useState(false);
 
-    useEffect(() => {
+  useEffect(() => {
+    const handleLoad = () => {
+      // Delay rendering until next paint cycle
+      requestAnimationFrame(() => {
+        setIsLoaded(true);
+      });
+    };
 
-        const handleLoad = () => {
-            setIsLoaded(true);
-        }
-
-        if (document.readyState === 'complete') {
-            handleLoad()
-        } else {
-            window.addEventListener('load', handleLoad);
-        }
-        return () => {
-            window.removeEventListener('load', handleLoad);
-        };
-    }, []);
-
-    if (!isLoaded) {
-        return (
-            <Loader />
-        )
+    if (document.readyState === 'complete') {
+      handleLoad();
+    } else {
+      window.addEventListener('load', handleLoad);
     }
+
+    return () => {
+      window.removeEventListener('load', handleLoad);
+    };
+  }, []);
+
+  if (!isLoaded) {
+    return <Loader />;
+  }
 
   return (
     <>
-    <div className='hidden max-lg:block'>
-      <Mobile />
-    </div>
-    <div className='max-md:hidden'>
-      <Nav />
-      <Header />
-      <Partners />
-      <Support />
-      <FAQs />
-      <Footer />
-    </div>
+      <div className="hidden max-lg:block">
+        <Mobile />
+      </div>
+      <div className="max-md:hidden">
+        <Nav />
+        <Header />
+        <Partners />
+        <Support />
+        <FAQs />
+        <Footer />
+      </div>
     </>
-  )
+  );
 }
 
-export default App
+export default App;

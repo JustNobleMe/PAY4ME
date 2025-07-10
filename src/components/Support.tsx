@@ -4,16 +4,11 @@ import {
   LucideArrowRight,
   LucideArrowUpRight,
   LucideLandmark,
-  LucideMonitorSmartphone,
   LucidePause,
-  LucidePhone,
   LucidePlay,
   LucideSmartphone,
-  LucideSmartphoneNfc,
-  LucideTabletSmartphone,
 } from "lucide-react";
 import Map from "../assets/images/map.png";
-import Tooltip from "./comp/tooltip";
 import Group from "../assets/images/group.jpg";
 import LaptopGuy from "../assets/images/lapguy.png";
 
